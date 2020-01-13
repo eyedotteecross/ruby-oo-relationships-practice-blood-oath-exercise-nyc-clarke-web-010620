@@ -10,7 +10,7 @@ class Blood_oath
     end 
     
     attr_reader :initiation_date, :cult, :follower
-    
+
     def self.all
         @@all 
     end 

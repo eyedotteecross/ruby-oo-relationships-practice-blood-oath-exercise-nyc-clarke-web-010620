@@ -50,13 +50,12 @@ class Cult
         @@all    
     end 
 
-    def self.find_by_name(name)
-        match = @@all.find{|cult| cult.name.upcase == name.upcase}
-            if name.include?("_")
-            "Use whitespace not underscores."
-            elsif !match
+    def self.find_by_name(cult_obj)
+        match = @@all.find{|cult| cult.name.upcase == cult_obj.name.upcase}
+            if !match
             "No cults with that name were found."
-            else match       
+            else 
+            match       
             end 
     end
     
